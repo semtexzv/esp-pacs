@@ -139,6 +139,48 @@ DS:
         addressOffset: 0x630
         size: 0x20
 
+_add:
+  WIFI:
+    description: 802.11 PHY registers
+    groupName: WIFI
+    baseAddress: 0x60033000
+    registers:
+      DMA_IN_STATUS:
+        addressOffset: 0x84
+        access: read-only
+        size: 32
+      DMA_INLINK:
+        addressOffset: 0x88
+        size: 32
+      DMA_INT_STATUS:
+        addressOffset: 0xc3C
+        access: read-only
+        size: 32
+      DMA_INT_CLEAR:
+        addressOffset: 0xc40
+        size: 32
+      STATUS:
+        addressOffset: 0xcb0
+        access: read-only
+        size: 32
+      DMA_OUTLINK:
+        addressOffset: 0xd08
+        size: 32
+      DMA_OUT_STATUS:
+        addressOffset: 0xd14
+        access: read-only
+        size: 32
+
+
+
+#  PHYA:
+#    description: TODO
+#    groupName: PHYA
+#  PWRMGR:
+#    description: TODO
+#    groupName: PWRMGR
+
+
 SYSTIMER:
   _include: 
     - ../../../common_patches/int_strip.yaml
